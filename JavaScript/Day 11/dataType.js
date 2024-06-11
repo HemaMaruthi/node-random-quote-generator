@@ -43,5 +43,6 @@ var age = 05;
 var isOnline = true;
 console.log(firstName + " " + age + " " + isOnline)
 
+console.log(void 0)
 
 
