@@ -43,9 +43,9 @@ var x = 1;
 // ++x; pre fix
 // x++;post fix
 
-// var y = ++x;
-// console.log(y++)
-// console.log(x)
+var y = ++x;
+console.log(y++)
+console.log(x)
 // var x = null;
 // name:mahesh
 
@@ -56,9 +56,9 @@ var x = 1;
 
 
 var trafficLight = "Green";
-// var trafficLight = "Yellow";
-// console.log(trafficLight)
-// console.log(trafficLight == "Green");
+var trafficLight = "Yellow";
+console.log(trafficLight)
+console.log(trafficLight == "Green");
 
 
 if(trafficLight ==  "Green"){
