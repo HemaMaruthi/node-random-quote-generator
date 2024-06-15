@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <h2>Function</h2>
+      <h1 id="function"></h1>
+      <script>
+        var juiceMixer = function (fruitA, fruitB) {
+          var juice =  "Juice made with " + fruitA + " and " + fruitB ;
+          console.log(juice);
+          return juice;
+        };
+
+        juiceMixer("Apple1", "Graphs1", "Mango");
+        // juiceMixer(2, 5);
+
+     var print=  document.getElementById("function");
+     print.innerHTML = juiceMixer("Apple", "Graphs");
+
+      </script>
+    </div>
+  </body>
+</html>
