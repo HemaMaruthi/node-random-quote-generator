@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        background-color: rgb(120, 116, 116);
+        padding-top: 20px;
+        height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Front End Development</h1>
+    </header>
+    <main>
+      <h3></h3>
+      <h2 id="title"></h2>
+      <p class="info"></p>
+      <h2 class="info"></h2>
+      <!-- <div class="queryT"></div> -->
+      <p class="queryT">Para</p>
+      <h2 class="queryT">H2</h2>
+      <ul id="course">
+        <li>HTML</li>
+      </ul>
+
+      <div id="parent">
+        <div id="child">This is Child Div</div>
+      </div>
+    </main>
+    <script>
+    //   var parentTag =   document.getElementById("parent");
+    //   var childTag = document.getElementById("child");
+    //   parentTag.removeChild(childTag)
+
+    //   var titleTag = document.getElementById("title");
+    //   titleTag.textContent = "About: Front End Classes";
+    //   var infoTag = document.getElementsByClassName("info");
+    //   infoTag[0].textContent =
+    //     "Hema Coding School is dedicated to providing high-quality coding education. Our experienced instructors are committed to helping you build a strong foundation in programming.";
+       var h3Tag = document.getElementsByTagName('h3');
+       h3Tag[0].textContent = "Detail view of FE";
+
+    //   var queryTag = document.querySelector(".queryT");
+    //   queryTag.innerHTML = "<h1>High Light Content</h1>";
+
+    //   var queryAllTag = document.querySelectorAll("p");
+    //   for (i = 0; i < queryAllTag.length; i++) {
+    //     queryAllTag[i].style.color = "red";
+    //   }
+    //   var ulTag = document.getElementById("course");
+    //   var createLiTag = document.createElement("li");
+    //   createLiTag.textContent = "CSS";
+    //   ulTag.appendChild(createLiTag);
+    </script>
+  </body>
+</html>
