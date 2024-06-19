@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="console.log('Inline event trigered')">Inline Event</button>
+    <button id="prop-button">Property Event</button>
+    <button id="add-event-button">Add Event</button>
+
+    <form action="" id="form-event">
+      <input type="text" id="user-name" />
+      <input type="submit" />
+    </form>
+    <div id="store-data"></div>
+
+    <script>
+      var propButton = document.getElementById("prop-button");
+      propButton.onclick = function () {
+        console.log("Property based event is trigered");
+      };
+
+      var addEventButton = document.getElementById("add-event-button");
+      addEventButton.addEventListener("click", function (event) {
+        console.log(event.type);
+        console.log(event.target.id);
+
+        console.log("Add event listerner is trigered");
+      });
+      addEventButton.addEventListener("mouseover", function () {
+        addEventButton.style.backgroundColor = "Green";
+        console.log("Add event listerner of mouseover is triggered");
+      });
+      addEventButton.addEventListener("mouseout", function () {
+        addEventButton.style.backgroundColor = "";
+        console.log("Add event listerner of mouseout is triggered");
+      });
+
+      addEventButton.addEventListener("keydown", function (event) {
+        // console.log(event);
+        console.log("Add event listerner of keydown is triggered " + event.key);
+      });
+
+      var formEvent = document.getElementById("form-event");
+      formEvent.addEventListener("submit", function () {
+        event.preventDefault();
+        var name = document.getElementById("user-name").value;
+
+        var storeData = document.getElementById("store-data");
+        var storeDatah2 = document.getElementById("store-data");
+
+        var newElement = document.createElement("p");
+        var listedElement = storeData.appendChild(newElement);
+
+        var newElementh2 = document.createElement("h2");
+        var listedElementh2 = storeDatah2.appendChild(newElementh2);
+
+        listedElement.textContent = name;
+        listedElementh2.textContent = name;
+
+        console.log("submit event is triggered");
+      });
+
+      
+    </script>
+  </body>
+</html>
