@@ -1,13 +1,13 @@
-function divide(a, b) {
-  if (b === 0) {
-    throw new Error("Division by zero is not allowed.");
-  }
-  return a / b;
+var a = 10;
+var b = 3;
+try{
+
+    console.log(a+b);
+}catch(error){
+    console.log(error.message)
+}finally{
+    console.log("Finally");
 }
 
-try {
-  let result = divide(4, 0);
-} catch (error) {
-  console.error(error.message);
-}
-
+var x = 6;
+console.log(x)
