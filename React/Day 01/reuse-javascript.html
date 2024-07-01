@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to React js class</h1>
+    <h2>Welcome to React js class 02</h2>
+    <div id="print"></div>
+    <script>
+      let reuseElement = () => {
+        let newJsElement = document.createElement("h2");
+        newJsElement.innerHTML = "Welcome to React js class 02";
+        document.getElementById("print").appendChild(newJsElement);
+      };
+      reuseElement();
+      reuseElement();
+      reuseElement();
+      reuseElement();
+      reuseElement();
+      reuseElement();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>Hello React class</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        // let newReactElement = React.createElement('h2',{id:'h2Id', style:{color:'red'}}, "Hello React js class 01")
+        // let newReactElement = React.createElement('h2',{id:'h2Id', style:{color:'red'}}, "Hello React js class 01",React.createElement('h2',{id:'h2Id', style:{color:'red'}}, "Hello React js class 01"),React.createElement('h2',{id:'h2Id', style:{color:'red'}}, "Hello React js class 01"))
+        // let newReactElement = React.createElement('h2',{id:'h2Id', style:{color:'red'}}, "Hello React js class 01")
+        // console.log(newReactElement)
+//         ReactDOM.render(newReactElement
+// , document.getElementById('root'))
+
+let reuseElement = ()=>{
+    let h2Jsx = <>
+    <h2 style={{color:'blue'}} >Hello React js class 01 jsx</h2>
+    <div>This is JSX</div>
+    </>
+    return h2Jsx
+}
+let mainElement = ()=>{
+
+    let createH2 = <>
+    <div>{reuseElement()}</div>
+    <div>{reuseElement()}</div>
+    <div>{reuseElement()}</div>
+    <div>{reuseElement()}</div>
+    <div>{reuseElement()}</div>
+    </>
+
+    ReactDOM.render(createH2, document.getElementById('root'))
+}
+mainElement() 
+    </script>
+</body>
+</html>
