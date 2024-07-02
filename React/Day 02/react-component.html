@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let CreateImg =(props)=>{
+            let imageStyle = {
+                color:'red',
+                 padding:'20px',
+                 boxShadow:'0px 0px 10px blue'
+            }
+
+            return(
+            <div style={imageStyle}>
+
+                <div>{props.name}</div>
+                <img src={props.img} alt="TATA" width="300px" height="300px" />
+                </div>
+            )
+        }
+        let App = <div style={{display:'flex', justifyContent:'space-evenly'}}>
+                
+                <CreateImg img="name="TATA" https://th.bing.com/th/id/OSK.HEROTz1E9VI8YBPyGCYZZ2f770WtSW1GyvqR2HBUJw2dn50?rs=1&pid=ImgDetMain"/>
+                <CreateImg name="TATA" img="https://th.bing.com/th/id/OSK.HEROTz1E9VI8YBPyGCYZZ2f770WtSW1GyvqR2HBUJw2dn50?rs=1&pid=ImgDetMain"/>
+                <CreateImg name="TATA" img="https://th.bing.com/th/id/OSK.HEROTz1E9VI8YBPyGCYZZ2f770WtSW1GyvqR2HBUJw2dn50?rs=1&pid=ImgDetMain"/>
+
+                
+
+            </div>
+        ReactDOM.render(App,document.getElementById('root'))
+
+    </script>
+</body>
+</html>
