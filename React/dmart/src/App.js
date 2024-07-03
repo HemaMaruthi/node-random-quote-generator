@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import CreateImage from './CreateImage.js'
+import FunctionBased from './Component/FunctionBased.js';
+import ClassBased from './Component/ClassBased.js'
 
 function App() {
   return (
     <div className="App">
-      <div></div>
-      <CreateImage/>
+      <div>Hello React Component</div>
+      <FunctionBased/>
+      <ClassBased/>
     </div>
   );
 }
