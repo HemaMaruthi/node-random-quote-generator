@@ -1,0 +1,11 @@
+.goods{
+    border: 2px solid rgb(214, 140, 42);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+img{
+    border-radius: 20px;
+}
