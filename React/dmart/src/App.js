@@ -4,6 +4,8 @@ import './Component/ClassBased.css'
 // import FunctionBased from './Component/FunctionBased.js';
 // import ClassBased from './Component/ClassBased.js';
 // import StateManage from './Component/Hook/StateManage.js';
+import Count from './Component/Hook/Count.js';
+
 
 // import Groceries from './Component/InventoryDashboard/Groceries.js';
 // import PackagedGoods from './Component/InventoryDashboard/PackagedGoods.js';
@@ -36,14 +38,14 @@ function App() {
           Home
         </div>
       </div>
-
+    <Count/>
       {/* <Electronics/> */}
-        {state ? <ComputorAccessories /> : <Stand />}
+        {/* {state ? <ComputorAccessories /> : <Stand />}
       <div className="train-info">
 
         <button onClick={() => setState(true)}>ComputorAccessories</button>
         <button onClick={() => setState(false)}>Stand</button>
-      </div>
+      </div> */}
     </div>
   );
   // let showComponent = false;
