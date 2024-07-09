@@ -4,15 +4,19 @@ import './Component/ClassBased.css'
 // import FunctionBased from './Component/FunctionBased.js';
 // import ClassBased from './Component/ClassBased.js';
 // import StateManage from './Component/Hook/StateManage.js';
-import Count from './Component/Hook/Count.js';
+// import Count from './Component/Hook/Count.js';
 
 
 // import Groceries from './Component/InventoryDashboard/Groceries.js';
 // import PackagedGoods from './Component/InventoryDashboard/PackagedGoods.js';
 // import ListItems from "./Component/InventoryDashboard/ListItems.js";
-import Electronics from "./Component/InventoryDashboard/Electronics.js";
-import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories.js";
-import Stand from "./Component/InventoryDashboard/Stand.js";
+// import Electronics from "./Component/InventoryDashboard/Electronics.js";
+// import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories.js";
+// import Stand from "./Component/InventoryDashboard/Stand.js";
+
+// import RefObject from './Component/Hook/RefObject.js'
+// import SalesReport from './Component/SalesDashboard/SalesReport.js';
+import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
 
 function App() {
   let [state, setState] = useState(false);
@@ -38,7 +42,11 @@ function App() {
           Home
         </div>
       </div>
-    <Count/>
+    {/* <Count/> */}
+    {/* <RefObject/> */}
+    {/* <SalesReport/> */}
+    <MonthlySalesReport/>
+
       {/* <Electronics/> */}
         {/* {state ? <ComputorAccessories /> : <Stand />}
       <div className="train-info">
