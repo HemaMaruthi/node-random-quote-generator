@@ -16,7 +16,12 @@ import './Component/ClassBased.css'
 
 // import RefObject from './Component/Hook/RefObject.js'
 // import SalesReport from './Component/SalesDashboard/SalesReport.js';
-import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
+// import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
+// import UseReducer from './Component/Hook/UseReducer.js';
+
+import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
+
+
 
 function App() {
   let [state, setState] = useState(false);
@@ -45,7 +50,9 @@ function App() {
     {/* <Count/> */}
     {/* <RefObject/> */}
     {/* <SalesReport/> */}
-    <MonthlySalesReport/>
+    {/* <MonthlySalesReport/> */}
+    {/* <UseReducer/> */}
+    <QuaterlySalesReport/>
 
       {/* <Electronics/> */}
         {/* {state ? <ComputorAccessories /> : <Stand />}
