@@ -12,7 +12,7 @@ function QuaterlySalesReport() {
     let intialValue = {
         month:'',
         saleReportValue: 0,
-        profit : 0
+        profit : 2
     }
     let formReducer=(formData, action)=>{
         console.log(action.type) // month

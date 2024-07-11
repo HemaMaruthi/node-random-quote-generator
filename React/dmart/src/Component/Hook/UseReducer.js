@@ -12,12 +12,13 @@ let reducer = (state, action)=>{
   console.log(action) // action =  {type:'inc'}
   console.log(action.type) // inc
 
+
   // if(action.type == 'Inc'){
   //   return state + 1;
   // }
   switch(action.type){
     case 'Inc' :
-      return state + 1;
+      return state + 2;
       case 'Sub' :
       return state - 1;
       case 'Mul' :

@@ -18,10 +18,10 @@ import './Component/ClassBased.css'
 // import SalesReport from './Component/SalesDashboard/SalesReport.js';
 // import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
 // import UseReducer from './Component/Hook/UseReducer.js';
+// import UseMemo from './Component/Hook/UseMemo.js';
+// import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
 
-import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
-
-
+import UseCallback from './Component/Hook/UseCallback/UseCallback.js';
 
 function App() {
   let [state, setState] = useState(false);
@@ -52,7 +52,10 @@ function App() {
     {/* <SalesReport/> */}
     {/* <MonthlySalesReport/> */}
     {/* <UseReducer/> */}
-    <QuaterlySalesReport/>
+    {/* <QuaterlySalesReport/> */}
+
+    {/* <UseMemo/> */}
+    <UseCallback/>
 
       {/* <Electronics/> */}
         {/* {state ? <ComputorAccessories /> : <Stand />}
