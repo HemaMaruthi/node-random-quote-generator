@@ -21,7 +21,8 @@ import './Component/ClassBased.css'
 // import UseMemo from './Component/Hook/UseMemo.js';
 // import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
 
-import UseCallback from './Component/Hook/UseCallback/UseCallback.js';
+// import UseCallback from './Component/Hook/UseCallback/UseCallback.js';
+import A from './Component/Hook/UseContext/A.js'
 
 function App() {
   let [state, setState] = useState(false);
@@ -55,7 +56,8 @@ function App() {
     {/* <QuaterlySalesReport/> */}
 
     {/* <UseMemo/> */}
-    <UseCallback/>
+    {/* <UseCallback/> */}
+    <A/>
 
       {/* <Electronics/> */}
         {/* {state ? <ComputorAccessories /> : <Stand />}
