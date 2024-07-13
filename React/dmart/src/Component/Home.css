@@ -1,0 +1,15 @@
+.home {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dmart-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom:10px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    color: darkgreen;
+  }

@@ -1,29 +1,19 @@
 import "./App.css";
 import { useState } from "react";
-import './Component/ClassBased.css'
-// import FunctionBased from './Component/FunctionBased.js';
-// import ClassBased from './Component/ClassBased.js';
-// import StateManage from './Component/Hook/StateManage.js';
-// import Count from './Component/Hook/Count.js';
+import "./Component/ClassBased.css";
 
+import Electronics from "./Component/InventoryDashboard/Electronics.js";
+import Groceries from "./Component/InventoryDashboard/Groceries.js";
+import ListItems from "./Component/InventoryDashboard/ListItems.js";
 
-// import Groceries from './Component/InventoryDashboard/Groceries.js';
-// import PackagedGoods from './Component/InventoryDashboard/PackagedGoods.js';
-// import ListItems from "./Component/InventoryDashboard/ListItems.js";
-// import Electronics from "./Component/InventoryDashboard/Electronics.js";
-// import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories.js";
-// import Stand from "./Component/InventoryDashboard/Stand.js";
+import MonthlySalesReport from "./Component/SalesDashboard/MonthlySalesReport.js";
+import Home from "./Component/Home.js";
+import PageNotFound from "./Component/PageNotFound.js";
 
-// import RefObject from './Component/Hook/RefObject.js'
-// import SalesReport from './Component/SalesDashboard/SalesReport.js';
-// import MonthlySalesReport from './Component/SalesDashboard/MonthlySalesReport.js';
-// import UseReducer from './Component/Hook/UseReducer.js';
-// import UseMemo from './Component/Hook/UseMemo.js';
-// import QuaterlySalesReport from './Component/SalesDashboard/QuaterlySalesReport.js';
+import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories";
+import Device from "./Component/Device.js";
 
-// import UseCallback from './Component/Hook/UseCallback/UseCallback.js';
-import A from './Component/Hook/UseContext/A.js'
-
+import { Route, Routes, Link } from "react-router-dom";
 function App() {
   let [state, setState] = useState(false);
   return (
@@ -32,64 +22,40 @@ function App() {
         <div className="logo">
           <img src="https://logowik.com/content/uploads/images/dmart-avenue-supermarts4302.jpg" />
         </div>
-        <div className="nav-link" href="#">
+        <Link to="/" className="nav-link">
           Home
-        </div>
-        <div className="nav-link" href="#">
-          Electronics
-        </div>
-        <div className="nav-link" href="#">
-          Home
-        </div>
-        <div className="nav-link" href="#">
-          Home
-        </div>
-        <div className="nav-link" href="#">
-          Home
-        </div>
+        </Link>
+        <Link to="/device" className="nav-link">
+          Device
+        </Link>
+        <Link to="/groceries" className="nav-link">
+          Groceries
+        </Link>
+        <Link to="/list-items" className="nav-link">
+          ListItems
+        </Link>
+        <Link to="/monthly-sales-report" className="nav-link">
+          Monthly Sales Report
+        </Link>
       </div>
-    {/* <Count/> */}
-    {/* <RefObject/> */}
-    {/* <SalesReport/> */}
-    {/* <MonthlySalesReport/> */}
-    {/* <UseReducer/> */}
-    {/* <QuaterlySalesReport/> */}
 
-    {/* <UseMemo/> */}
-    {/* <UseCallback/> */}
-    <A/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<PageNotFound />} />
 
-      {/* <Electronics/> */}
-        {/* {state ? <ComputorAccessories /> : <Stand />}
-      <div className="train-info">
+        <Route path="/device" element={<Device />}>
+          <Route path="electronics" element={<Electronics />} />
+          <Route path="computor-accessories" element={<ComputorAccessories />} />
 
-        <button onClick={() => setState(true)}>ComputorAccessories</button>
-        <button onClick={() => setState(false)}>Stand</button>
-      </div> */}
+
+        </Route>
+
+        <Route path="/groceries" element={<Groceries />} />
+        <Route path="/list-items" element={<ListItems />} />
+        <Route path="/monthly-sales-report" element={<MonthlySalesReport />} />
+      </Routes>
     </div>
   );
-  // let showComponent = false;
-
-  // if(showComponent){
-  // return  <FunctionBased/>
-  // }else{
-  //  return <ClassBased/>
-  // }
-  //  return showComponent ? <FunctionBased/> : <ClassBased/>
-
-  // return <StateManage/>
-  // return <Groceries/>
-  // return <PackagedGoods/>
-
-  // return <ListItems/>
-
-  // return (
-  //   <div className="App">
-  //     <div>Hello React Component</div>
-  //     <FunctionBased/>
-  //     <ClassBased/>
-  //   </div>
-  // );
 }
 
 export default App;
