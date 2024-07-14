@@ -1,0 +1,16 @@
+.dev-container{
+    margin-top:20px ;
+    text-align: center;
+}
+
+.dev-link{
+    background-color: rgb(192, 188, 196);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.outlet-container{
+    margin-top: 20px;
+}

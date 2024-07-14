@@ -12,8 +12,9 @@ import PageNotFound from "./Component/PageNotFound.js";
 
 import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories";
 import Device from "./Component/Device.js";
+import DeviceDetails from "./Component/DeviceDetails.js";
 
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, Navigate } from "react-router-dom";
 function App() {
   let [state, setState] = useState(false);
   return (
@@ -44,21 +45,21 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
 
         <Route path="/device" element={<Device />}>
+          <Route path="" element={<Navigate to="electronics" />} />
           <Route path="electronics" element={<Electronics />} />
-          <Route path="computor-accessories" element={<ComputorAccessories />} />
-
-
+          <Route
+            path="computor-accessories"
+            element={<ComputorAccessories />}
+          />
         </Route>
 
         <Route path="/groceries" element={<Groceries />} />
         <Route path="/list-items" element={<ListItems />} />
         <Route path="/monthly-sales-report" element={<MonthlySalesReport />} />
+        <Route path="/device-details/:id" element={<DeviceDetails />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
-
-

@@ -1,8 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Electronics.css";
+import { Link } from "react-router-dom";
+
 function Electronics() {
   let [electronics, setElectronics] = useState([
-    {
+    { 
+      id:9,
       title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
       description:
         "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
@@ -29,25 +32,26 @@ function Electronics() {
   // })
   return (
     <div className="container">
-    <div className="electronics-container">
-      {electronics.map((device) => {
-        console.log(device);
+      <div className="electronics-container">
+        {electronics.map((device) => {
+          console.log(device.id);
 
-        return (
-          <div className="device-container">
-            <img src={device.image} width="200px" height="200px" />
-            <div className="device-details">
-              <h2>{device.title}</h2>
+          return (
+            <div className="device-container">
+              <img src={device.image} width="200px" height="200px" />
+              <div className="device-details">
+                <Link to={`/device-details/${device.id}`}>
+                  <h2>{device.title}</h2>
+                </Link>
+              </div>
+              <div>{device.description}</div>
+              <div>Rating: {device.rating.rate}</div>
+              <div>{device.rating.count} review</div>
             </div>
-            <div>{device.description}</div>
-            <div>Rating: {device.rating.rate}</div>
-            <div>{device.rating.count} review</div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
       <button onClick={getElectronics}>Electronics</button>
-
     </div>
   );
 }
