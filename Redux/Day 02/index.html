@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js"></script>
+</head>
+<body>
+    <h1 >Count:<b id="count"></b></h1>
+    <button id="inc">Add</button>
+    <button id="dec">Remove</button>
+    <button id="mlt">Multify</button>
+
+
+    <script>
+        const defaultState = {
+            count:2
+        }
+        const myReducer=(state=defaultState,action)=>{
+            console.log(state);
+            console.log(action);
+
+            if(action.type==="ADD"){
+                const data = {
+                    ...state,
+                    count:state.count + action.payload
+                }
+                document.getElementById('count').textContent = data.count
+                return data
+            }
+           else if(action.type==="REMOVE"){
+                const data = {
+                    ...state,
+                    count:state.count - action.payload
+                }
+                document.getElementById('count').textContent = data.count
+                return data
+            }
+            else if(action.type==="MLT"){
+                const data = {
+                    ...state,
+                    count:state.count * action.payload
+                }
+                document.getElementById('count').textContent = data.count
+                return data
+            }
+        }
+        const store = Redux.createStore(myReducer)
+        console.log(store)
+
+        document.getElementById('inc').addEventListener('click',function action(){
+           store.dispatch({type:"ADD", payload:3})})
+
+
+           document.getElementById('dec').addEventListener('click',function action(){
+           store.dispatch({type:"REMOVE", payload:3})})
+
+           document.getElementById('mlt').addEventListener('click',function action(){
+           store.dispatch({type:"MLT", payload:3})})
+    </script>
+</body>
+</html>
