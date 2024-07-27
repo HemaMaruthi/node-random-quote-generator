@@ -15,6 +15,7 @@ import Device from "./Component/Device.js";
 import DeviceDetails from "./Component/DeviceDetails.js";
 
 import { Route, Routes, Link, Navigate } from "react-router-dom";
+import Input from "./Component/React-Redux/Input.js";
 function App() {
   let [state, setState] = useState(false);
   return (
@@ -38,6 +39,9 @@ function App() {
         <Link to="/monthly-sales-report" className="nav-link">
           Monthly Sales Report
         </Link>
+        <Link to="/input" className="nav-link">
+          React Redux
+        </Link>
       </div>
 
       <Routes>
@@ -57,6 +61,7 @@ function App() {
         <Route path="/list-items" element={<ListItems />} />
         <Route path="/monthly-sales-report" element={<MonthlySalesReport />} />
         <Route path="/device-details/:id" element={<DeviceDetails />} />
+        <Route path="/input" element={<Input />} />
       </Routes>
     </div>
   );
