@@ -1,0 +1,22 @@
+{
+  "name": "node-random-quote-generator",
+  "version": "1.0.0",
+  "description": "An npm package to random-quote-generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemaMaruthi/node-random-quote-generator"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Mahesh H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HemaMaruthi/node-random-quote-generator/issues"
+  },
+  "homepage": "https://github.com/HemaMaruthi/node-random-quote-generator#readme"
+}
