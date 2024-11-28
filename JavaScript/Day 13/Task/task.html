@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declare variables for the two numbers and the operator
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let operator = prompt("Enter the operator (+, -, *, /, %):");
+
+// Use a switch statement to perform the operation
+let result;
+
+switch (operator) {
+  case '+':
+    result = num1 + num2;
+    break;
+  case '-':
+    result = num1 - num2;
+    break;
+  case '*':
+    result = num1 * num2;
+    break;
+  case '/':
+    // Check if num2 is not 0 to avoid division by zero
+    if (num2 !== 0) {
+      result = num1 / num2;
+    } else {
+      result = "Error: Division by zero is not allowed.";
+    }
+    break;
+  case '%':
+    // Check if num2 is not 0 to avoid modulus by zero
+    if (num2 !== 0) {
+      result = num1 % num2;
+    } else {
+      result = "Error: Modulus by zero is not allowed.";
+    }
+    break;
+  default:
+    result = "Error: Invalid operator";
+}
+
+// Display the result
+console.log("Result: " + result);
+
+    </script>
+</body>
+</html>

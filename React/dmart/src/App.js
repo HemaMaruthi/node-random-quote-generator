@@ -13,7 +13,6 @@ import PageNotFound from "./Component/PageNotFound.js";
 import ComputorAccessories from "./Component/InventoryDashboard/ComputorAccessories";
 import Device from "./Component/Device.js";
 import DeviceDetails from "./Component/DeviceDetails.js";
-
 import { Route, Routes, Link, Navigate } from "react-router-dom";
 import Input from "./Component/React-Redux/Input.js";
 function App() {

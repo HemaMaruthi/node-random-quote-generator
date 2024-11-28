@@ -1,0 +1,22 @@
+{
+  "name": "random-hema-code-array",
+  "version": "2.0.1",
+  "description": "classs of full stack web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemaMaruthi/hema-ramdom-array.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Mahesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HemaMaruthi/hema-ramdom-array/issues"
+  },
+  "homepage": "https://github.com/HemaMaruthi/hema-ramdom-array#readme"
+}

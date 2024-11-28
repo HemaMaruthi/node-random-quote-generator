@@ -95,6 +95,7 @@ function sayHi(){
 }
 
 function add(a, b, callBack) {
+  
     callBack();
   console.log(a + b);
 }

@@ -16,8 +16,8 @@
 // console.log(person);
 
 // function Person(n,e){
-//     this.name = n,
-//     this.age = e
+//   Person.name = n,
+//   Person.age = e
 // }
 
 // var person1 = new Person("Hema",21);
@@ -64,28 +64,28 @@
 
 // console.log(student)
 
-var student = {
-  name: "Hema",
-  age: 12,
-  greet: function () {
-  return "Welcome to Javascript";
-  },
-  address: {
-    hno: 123,
-    street: "Street",
-  },
-  contact: {
-    email: "hema@gmail.com",
-    phone: 123655,
-  },
-};
+// var student = {
+//   name: "Hema",
+//   age: 12,
+//   greet: function () {
+//   return "Welcome to Javascript";
+//   },
+//   address: {
+//     hno: 123,
+//     street: "Street",
+//   },
+//   contact: {
+//     email: "hema@gmail.com",
+//     phone: 123655,
+//   },
+// };
 // console.log(student["greet"]())
 // for(var key in student){
 //     console.log(student[key])
 // }
 
-console.log(student.address.hno)
-console.log(student["address"]["street"])
+// console.log(student.address.hno)
+// console.log(student["address"]["street"])
 // console.log(student.greet())
 // for(var key in student){
 //     // console.log(student[key]())
@@ -100,3 +100,24 @@ console.log(student["address"]["street"])
 // console.log(Object.values(student))
 // console.log(Object.entries(student))
 
+var company = {
+  name: "softech",
+  location: "hyderabad",
+  employees: {
+    raju: "data analyst",
+    rohit: "sales executer",
+    rakesh: "software engineer"
+  }
+};
+
+// First for...in loop
+for (var key in company) {
+  console.log(key);          // Logs keys of 'company' object
+  // console.log(company[key]);  // This would log the values
+}
+
+// Second for...in loop
+for (var key in company.employees) {
+  console.log(key);             // Logs keys in 'employees' object (raju, rohit, rakesh)
+  console.log(company.employees[key]);    // Potential issue here
+}

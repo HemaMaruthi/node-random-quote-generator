@@ -1,4 +1,4 @@
-// var jewelleryBox = ["Rings", "Nacklace","Earrings","Bracelet"];
+var jewelleryBox = ["Rings", "Nacklace","Earrings","Bracelet"];
 // console.log(jewelleryBox[0])
 
 // jewelleryBox.push("Watch", "Chains")
@@ -13,7 +13,7 @@
 // var removeItem = jewelleryBox.slice(2,3)
 // console.log(removeItem)
 
-// jewelleryBox.splice(2,1, "Watch", "Chains");
+console.log( jewelleryBox.splice(2,1, "Watch", "Chains"));
 // console.log(jewelleryBox.indexOf("Earrings"));
 // console.log(jewelleryBox.join("Edg, "))
 
@@ -26,7 +26,7 @@
 
 // var call = string.split("").reverse()
 // console.log(call)
-var jewelleryBox = ["Rings", "Nacklace","Earrings","Bracelet"];
+// var jewelleryBox = ["Rings", "Nacklace","Earrings","Bracelet"];
 // console.log(jewelleryBox[0]);
 // console.log(jewelleryBox[1]);
 // console.log(jewelleryBox[2]);

@@ -9,9 +9,9 @@ console.log(person2.hasOwnProperty("age"));
 function Person(firstName,lastName){
 this.firstName = firstName;
 this.lastName = lastName;
-// this.fullName = function(){
-//     return `My Name is ${firstName} and last name ${lastName}`
-// }
+this.fullName = function(){
+    return `My Name is ${firstName} and last name ${lastName}`
+}
 }
 let person3 = new Person("Mahesh", "coding");
 let person4 = new Person("Hema", "coding");

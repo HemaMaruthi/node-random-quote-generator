@@ -2,8 +2,8 @@ import React,{useRef} from 'react';
 import "../../Component/ClassBased.css";
 
 function SalesReport() {
-        let nameRef = useRef();
-        let reportRef = useRef();
+        let nameRef = useRef("React");
+        let reportRef = useRef(10);
     console.log(nameRef, reportRef)
     let getReport =(event)=>{
         event.preventDefault();
